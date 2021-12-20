@@ -1,7 +1,108 @@
-<html>
-<head><title>test</title></head>
-<body> 
-<img align="middle" src="godzilla.gif">
-Dave O'Hallaron
-</body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>Tiny Web</title>
+        <style>
+            .backgroundimg {
+                background-image: url(/static/red.jpeg);
+            }
+        </style>
+    </head>
+    <body>
+        <h2>더하기</h2>
+        <form action="/cgi-bin/adder" method="GET">
+            <p>first number: <input type="text" name="first" /></p>
+            <p>second number: <input type="text" name="second" /></p>
+            <input type="submit" value="더하기" />
+        </form>
+        <!-- 오디오 & 비디오 공용옵셥들  -->
+        <!-- controls : 재생막대바 표시 -->
+        <!-- autoplay 자동재생, 최신브라우저는 대부분 지원안함(단, 비디오는 muted 사용시 됨) -->
+        <!-- loop: 반복재생 -->
+        <!-- preload : auto 전부불러오기/ metadata 메타데이터만/ none 미리가져오기X -->
+        <!-- width/height : 택일, 나머지는 자동비율계산 -->
+        <!-- poster : 비디오 재생전 표시될 이미지파일. -->
+        <h2>수습 국원 모집</h2>
+
+        <video
+            poster="static/mic.jpg"
+            src="medias/salad.mp4"
+            width="50%"
+            controls
+        ></video>
+        <!-- <audio
+            src="medias/07 1725 Vivaldi _ The Four Seasons - Spring.mp3"
+            controls
+        ></audio> -->
+        <h3>방송에 관심 있는 새내기 여러분 환영합니다.</h3>
+        <p>
+            교내 방송국에서 신입생을 대상으로 수습 국원을 모집합니다. 학부나
+            전공에 상관 없습니다.<br />
+            평소에 방송에 관심있었던 여러 학우들의 지원바랍니다.
+        </p>
+        <ul>
+            <li><b>모집 기간 : </b>3월 2일 ~ 3월 11일</li>
+            <li><b>모집 분야 : </b>아나운서, PD, 엔지니어</li>
+            <li><b>지원 방법 : </b>양식 작성 후 이메일 접수</li>
+            <i>지원서 양식은 교내 방송국 홈페이지 공지 게시판에 있습니다.</i>
+        </ul>
+        <h4>혜택</h4>
+        <ol type="a">
+            <li>수습기자 활동 중 소정의 활동비 지급</li>
+            <li>정기자로 진급하면 장학금 지급</li>
+        </ol>
+        <hr />
+        <h2>상품구성</h2>
+        <table border="1" class="backgroundimg">
+            <caption>
+                선물용과 가정용 상품 구성<sup>*</sup>
+            </caption>
+            <tr align="center">
+                <th>용도</th>
+                <th>중량</th>
+                <th>개수</th>
+                <th>가격</th>
+            </tr>
+            <tr align="center">
+                <td rowspan="2">선물용</td>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>35,000원</td>
+            </tr>
+            <tr>
+                <td>5kg</td>
+                <td>18~26과</td>
+                <td>52,000원</td>
+            </tr>
+            <tr align="center">
+                <td rowspan="2">가정용</td>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>30,000원</td>
+            </tr>
+            <tr>
+                <td>5kg</td>
+                <td>18~26과</td>
+                <td>47,000원</td>
+            </tr>
+        </table>
+        <br />
+        <table border="1" width="300px" height="300px">
+            <tr>
+                <td colspan="2" bgcolor="red"></td>
+                <td rowspan="2" bgcolor="yellow"></td>
+            </tr>
+            <tr>
+                <td rowspan="2" bgcolor="blue"></td>
+                <td bgcolor="green"></td>
+            </tr>
+            <tr>
+                <td colspan="2" bgcolor="pink"></td>
+            </tr>
+        </table>
+        <br />
+        <img src="static/mic.jpg" width="400px" />
+    </body>
 </html>
