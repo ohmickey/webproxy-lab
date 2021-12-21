@@ -11,11 +11,11 @@
         </style>
     </head>
     <body>
-        <h2>더하기</h2>
+        <h2>곱하기</h2>
         <form action="/cgi-bin/adder" method="GET">
             <p>first number: <input type="text" name="first" /></p>
             <p>second number: <input type="text" name="second" /></p>
-            <input type="submit" value="더하기" />
+            <input type="submit" value="곱하기" />
         </form>
         <!-- 오디오 & 비디오 공용옵셥들  -->
         <!-- controls : 재생막대바 표시 -->
@@ -25,6 +25,7 @@
         <!-- width/height : 택일, 나머지는 자동비율계산 -->
         <!-- poster : 비디오 재생전 표시될 이미지파일. -->
         <h2>수습 국원 모집</h2>
+        <h2 id="clock" >00:00:00</h2>
 
         <video
             poster="static/mic.jpg"
@@ -32,9 +33,11 @@
             width="50%"
             controls
         ></video>
+        <br />
         <!-- <audio
-            src="medias/07 1725 Vivaldi _ The Four Seasons - Spring.mp3"
+            src="vivaldi_the_four_seasons_spring.mp3"
             controls
+            muted
         ></audio> -->
         <h3>방송에 관심 있는 새내기 여러분 환영합니다.</h3>
         <p>
@@ -104,5 +107,6 @@
         </table>
         <br />
         <img src="static/mic.jpg" width="400px" />
+        <script src="js/clock.js"></script>
     </body>
 </html>
