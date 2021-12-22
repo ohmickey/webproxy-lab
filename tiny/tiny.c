@@ -23,7 +23,7 @@ void doit(int fd){  // Transaction 단위 처리, Tiny는 GET 메소드만 지�
     struct stat sbuf;
     char buf[MAXLINE], method[MAXLINE], uri[MAXLINE], version[MAXLINE];
     char filename[MAXLINE], cgiargs[MAXLINE];
-    rio_t rio;  // RIO 패키지 : I/O 제공 패키지
+    rio_t rio;  // for client
 
     // Read request line and headers
     Rio_readinitb(&rio, fd); // rio 구조체 초기화, rio_fd -> fd(connfd), rio_bufptr -> rio_buf, rio_cnt = 0
@@ -221,7 +221,7 @@ void serve_dynamic(int fd, char *filename, char *cgiargs, char *method) {
     Wait(NULL); /* Parent waits for and reaps child */
 }
 
-    int main(int argc, char **argv) { // char *argv[] 형태로 받아도 동일.
+int main(int argc, char **argv) { // char *argv[] 형태로 받아도 동일.
     int listenfd, connfd;
     char hostname[MAXLINE], port[MAXLINE]; // MAXLINE 8192
     socklen_t clientlen;
