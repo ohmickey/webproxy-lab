@@ -43,10 +43,7 @@ int main(int argc,char **argv)
         /*print accepted message*/
         Getnameinfo((SA*)&clientaddr,clientlen,hostname,MAXLINE,port,MAXLINE,0);
         printf("Accepted connection from (%s %s).\n",hostname,port);
-
-        /*sequential handle the client transaction*/
         doit(connfd);
-
         Close(connfd);
     }
     return 0;
@@ -74,7 +71,7 @@ void doit(int connfd)
         return;
     }
     /*parse the uri to get hostname,file path ,port*/
-    parse_uri(uri,hostname,path,&port); // 
+    parse_uri(uri,hostname,path,&port); //
 
     /*build the http header which will send to the end server*/
     build_http_header(endserver_http_header,hostname,path,port,&rio);
